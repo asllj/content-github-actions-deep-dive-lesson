@@ -25,6 +25,7 @@ jobs:
             flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
             
   build:
+    needs: lint
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout code 
