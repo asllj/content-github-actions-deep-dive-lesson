@@ -54,7 +54,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.release_number }}
+          tag_name: ${{ github.ref }}
+          #tag_name: ${{ github.release_number }}
           release_name: Release from ${{ github.release_number }}
           body: New Release for ${{ github.sha }}. Release notes on the documentation site.
           draft: false
